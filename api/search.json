@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1",
+        "image": "images/01.jpg",
+        "category": "cellphone",
+        "title": "Item's title",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "closeDate": "2014-05-31",
+        "watchers": "17",
+        "price": "1234",
+        "currency": "$"
+    },
+    {
+        "id": "2",
+        "image": "images/02.jpg",
+        "category": "cellphone",
+        "title": "Item's title",
+        "description": "Millions of amazing sites across the web are being built with Bootstrap. Get started on your own with our growing collection of examples or by exploring some of our favorites.",
+        "closeDate": "2014-05-31",
+        "watchers": "17",
+        "price": "1234",
+        "currency": "$"
+    }
+]

@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="row">
+    <ul class="list-unstyled">
+      <li class="col-sm-12">
+        <a href="#mainPage">Home</a> > Search result
+      </li>
+      <li class="col-sm-12 col-xs-12 col-md-4">
+        <div class="row">
+          <div class="col-md-12 col-sm-6 col-xs-12">
+            <label class="control-label">Product</label><br />
+            <div style="padding-bottom: 0.3em;">
+              <INPUT TYPE="TEXT" class="form-control" placeholder="Product name"
+                   ng-bing="searchString">
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <SELECT class="form-control">
+                <OPTION>Category - 1</OPTION>
+                <OPTION>Category - 2</OPTION>
+                <OPTION>Category - 3</OPTION>
+              </SELECT>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-sm-12 col-md-4 col-xs-12">
+        <label class="control-label">Current Price</label>
+        <div style="padding-bottom: 0.3em;">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-xs-6">
+              <INPUT ID="price_LeftBound" style="width: 70px;" TYPE="number" class="form-control" VALUE="$1000">
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6">
+              <INPUT ID="price_RightBound" style="width: 70px;" TYPE="number" class="form-control" VALUE="$1500">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-xs-12">
+          <div class="form-group">
+            <input id="price_range" type="text" style='width:100%' value=''
+               data-clider-min="1000" data-slider-max="2000"
+               data-slider-step="1" data-slider-value="[1200,1500]">
+          </div>
+        </div>
+      </li>
+      <li class="col-sm-6 col-md-4 col-xs-12" style="padding-bottom: 0.5em;">
+        <label for="DPck">Max Auction Close Date</label>
+        <div class="input-group date"  style="padding-bottom: 0.3em;">
+          <input class="form-control" size="16" type="text" id="DPck">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar" id="DPct"></span>
+          </span>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <label class="control-label">Number of Bids</label>&nbsp;
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <SELECT class="form-control">
+                <OPTION>1</OPTION>
+                <OPTION>2</OPTION>
+                <OPTION>3</OPTION>
+              </SELECT>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-md-12 col-sm-12 col-xs-12">
+        <button class="btn center-block btn-block btn-wide" type="button">Find now</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row" id="search-results">
+    <!-- Featured Products list with thumbnails and description  -->
+    <ul class="list-unstyled">
+      <li ng-repeat="product in searchResults" class="col-sm-12 col-md-6 col-xs-12">
+        <div class="col-xs-12 visible-xs">
+          <h2><a href="javascript:void(0)">{{product.title}}</a></h2>
+        </div>
+        <div class="col-md-6 col-sm-5 col-xs-4">
+          <a href="javascript:void(0)"><img src="{{product.image}}" alt="" class="img-responsive"></a>
+        </div>
+        <div class="col-md-6 col-sm-6 hidden-xs">
+          <h2><a href="javascript:void(0)">{{product.title}}</a></h2>
+        </div>
+        <div class="product-description-holder col-md-6 col-sm-7 col-xs-8">
+          <p><b>{{product.description}}</b></p>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 col-sm-push-8">
+          <div class="row col-md-12 col-sm-12 col-xs-4">
+            <label class="control-label">
+              {{product.currency}} {{product.price}}
+            </label>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-8">Current Price</div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-4">
+              <span class="glyphicon glyphicon-eye-open"></span>&nbsp;
+              <label class="control-label">{{product.watchers}}</label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-8"><span>Watchers</span></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 col-sm-pull-8">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-4"><label class="control-label">6h left</label></div>
+            <div class="col-md-12 col-sm-12 col-xs-8"><span>Today 15:23</span></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+        <!-- / Featured Products list with thumbnails and description  -->
+  </div>
+
+  <script src="scripts/bootstrap-datepicker.js"></script>
+  <script src="scripts/bootstrap-slider.js"></script>
+  <script src="scripts/search-init.js"></script>
+</div>
+
